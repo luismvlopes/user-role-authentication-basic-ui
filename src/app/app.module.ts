@@ -11,6 +11,7 @@ import { HeaderComponent } from './header/header.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
 
 import { RoutingModule } from './routing.module'; // Importe o módulo de roteamento
+import { FormsModule }   from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { RoutingModule } from './routing.module'; // Importe o módulo de roteam
   imports: [
     BrowserModule,
     RouterModule,
-    RoutingModule
+    RoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
