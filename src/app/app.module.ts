@@ -10,7 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
 
-import { AppRoutingModule } from './app-routing.module'; // Importe o módulo de roteamento
+import { RoutingModule } from './routing.module'; // Importe o módulo de roteamento
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import { AppRoutingModule } from './app-routing.module'; // Importe o módulo de
   imports: [
     BrowserModule,
     RouterModule,
-    AppRoutingModule
+    RoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
