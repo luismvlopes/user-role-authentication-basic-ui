@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { UserService } from '../_services/user.service';
+import { UserAuthService } from '../_services/user-auth.service';
 
 @Component({
   selector: 'app-login',
@@ -8,8 +10,21 @@ import { NgForm } from '@angular/forms';
 })
 export class LoginComponent {
 
+  constructor(
+    private userService: UserService, 
+    private userAuthService: UserAuthService
+    ) { }
+
   login(loginForm: NgForm) {
-    console.log("Form is submitted");
-}
+    this.userService.login(loginForm.value).subscribe(
+      (response: any) => {
+        console.log(response.jwtToken);
+        console.log(response.user.role);
+      },
+      (error) => {
+        console.log(error)
+      }
+    )
+  } 
 
 }
